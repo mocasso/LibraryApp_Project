@@ -3,8 +3,9 @@ package com.cydeo.steps;
 import com.cydeo.pages.DashBoardPage;
 import com.cydeo.pages.LoginPage;
 import com.cydeo.utility.BrowserUtil;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
+import com.cydeo.utility.DB_Util;
+import io.cucumber.java.en.*;
+import org.junit.Assert;
 
 public class DashboardStepDefs
 {
@@ -29,6 +30,37 @@ public class DashboardStepDefs
         System.out.println("actualBookNumbers = " + actualBookNumbers);
         actualBorrowedBookNumbers = dashBoardPage.borrowedBooksNumber.getText();
         System.out.println("actualBorrowedBookNumbers = " + actualBorrowedBookNumbers);
+
+    }
+
+    @Then("the informations should be same with database")
+    public void the_informations_should_be_same_with_database() {
+
+        /*
+        Which one is actual / expected ?
+
+        Expected --> Database
+        Actual   --> UI
+
+         */
+
+        // 1 -  Make connection
+        DB_Util.createConnection();
+
+        // USERS
+            //Run Query
+            DB_Util.runQuery("select count(*) from users");
+
+            //Store Data
+            String expectedUsers = DB_Util.getFirstRowFirstColumn();
+
+            //Compare
+            Assert.assertEquals(expectedUsers,actualUserNumbers);
+
+
+
+        // Close Connection
+        DB_Util.destroy();
 
     }
 }

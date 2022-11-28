@@ -1,4 +1,4 @@
-
+@wip
 Feature: Dashboard Page
 
   Scenario: Dashboard data verification
