@@ -45,7 +45,7 @@ public class DashboardStepDefs
          */
 
         // 1 -  Make connection
-        DB_Util.createConnection();
+        // DB_Util.createConnection();--> Since we have custom hooks we dont need to connect database from step defs
 
         // USERS
             //Run Query
@@ -81,7 +81,7 @@ public class DashboardStepDefs
 
 
         // Close Connection
-        DB_Util.destroy();
+        // DB_Util.destroy(); --> After("@db") will close connections
 
     }
 }
