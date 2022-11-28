@@ -3,6 +3,7 @@ package com.cydeo.steps;
 import com.cydeo.pages.BookPage;
 import com.cydeo.pages.DashBoardPage;
 import com.cydeo.utility.BrowserUtil;
+import com.cydeo.utility.DB_Util;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -43,6 +44,24 @@ public class BooksStepDefs {
         System.out.println("bookName = " + bookName);
         BrowserUtil.waitForClickablility(bookPage.search, 5).sendKeys(bookName);
         BrowserUtil.waitForClickablility(bookPage.editBook(bookName), 5).click();
+
+    }
+
+    @Then("verify book categories must match book categories table from db")
+    public void verify_book_categories_must_match_book_categories_table_from_db() {
+
+         String query="select name from book_categories";
+
+         //run query to get all categories from Database
+        DB_Util.runQuery(query);
+
+        //store data
+       List<String> expectedCategoryList= DB_Util.getColumnDataAsList(1);
+
+
+       // Assertions
+        Assert.assertEquals(expectedCategoryList,actualCategoryList);
+
 
     }
 
