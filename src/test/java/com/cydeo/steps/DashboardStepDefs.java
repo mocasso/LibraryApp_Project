@@ -52,7 +52,7 @@ public class DashboardStepDefs
             DB_Util.runQuery("select count(*) from users");
 
             //Store Data
-            String expectedUsers = DB_Util.getFirstRowFirstColumn();
+            String expectedUsers = DB_Util.getCellValue(1,1);
 
             //Compare
             Assert.assertEquals(expectedUsers,actualUserNumbers);
