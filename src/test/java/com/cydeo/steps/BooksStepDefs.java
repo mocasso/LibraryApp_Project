@@ -65,4 +65,9 @@ public class BooksStepDefs {
 
     }
 
+    @Then("book information must match the database for {string}")
+    public void book_information_must_match_the_database_for(String bookName) {
+
+    }
+
 }
