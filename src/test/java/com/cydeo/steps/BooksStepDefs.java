@@ -68,6 +68,31 @@ public class BooksStepDefs {
     @Then("book information must match the database for {string}")
     public void book_information_must_match_the_database_for(String bookName) {
 
+        // get data from UI
+        BrowserUtil.waitFor(4);
+        System.out.println("-----Assertion step-----");
+        System.out.println(bookPage.bookName.getText());
+        System.out.println("getAttribute(value)--> "+bookPage.bookName.getAttribute("value"));
+        System.out.println("bookPage.bookName.getAttribute(\"innerHTMl\") = " + bookPage.bookName.getAttribute("innerHTML"));
+
+        /*
+        1.getText() --> it will return text from provided element
+        2.getAttribute("value") --> if there is inputbox we are gonna use getattribute("value") to get data from here
+        3.getAttribute("innerHTMl") --> it will get HTML code for related element 
+
+         */
+
+        String actualBookName = bookPage.bookName.getAttribute("value");
+
+
+        // get data from Database
+
+
+        // compare
+
+
+
+
     }
 
 }
