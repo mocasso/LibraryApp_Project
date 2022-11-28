@@ -84,4 +84,9 @@ public class DashboardStepDefs
         // DB_Util.destroy(); --> After("@db") will close connections
 
     }
+
+    @Then("verify book categories must match book categories table from db")
+    public void verify_book_categories_must_match_book_categories_table_from_db() {
+
+    }
 }
