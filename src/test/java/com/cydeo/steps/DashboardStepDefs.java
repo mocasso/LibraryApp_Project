@@ -57,6 +57,27 @@ public class DashboardStepDefs
             //Compare
             Assert.assertEquals(expectedUsers,actualUserNumbers);
 
+        // BOOKS
+
+            //Run Query
+            DB_Util.runQuery("select count(*) from books");
+            //Store Data
+            String expectedBook = DB_Util.getFirstRowFirstColumn();
+            //Compare
+            Assert.assertEquals(expectedBook,actualBookNumbers);
+
+
+        // BORROWED BOOKS
+
+            //Run Query
+            DB_Util.runQuery("select count(*) from book_borrow\n" +
+                    "where is_returned=0");
+            //Store Data
+            String expectedBorrowedBook = DB_Util.getFirstRowFirstColumn();
+            //Compare
+            Assert.assertEquals(expectedBorrowedBook,actualBorrowedBookNumbers);
+
+
 
 
         // Close Connection
