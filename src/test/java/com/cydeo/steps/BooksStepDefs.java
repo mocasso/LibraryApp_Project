@@ -73,13 +73,25 @@ public class BooksStepDefs {
         System.out.println("-----Assertion step-----");
         System.out.println(bookPage.bookName.getText());
         System.out.println("getAttribute(value)--> "+bookPage.bookName.getAttribute("value"));
-        System.out.println("bookPage.bookName.getAttribute(\"innerHTMl\") = " + bookPage.bookName.getAttribute("outerHTML"));
+        System.out.println("bookPage.bookName.getAttribute(\"innerHTML\") = " + bookPage.bookName.getAttribute("innerHTML"));
+
+        System.out.println("bookPage.bookName.getAttribute(\"outerHTML\") = " + bookPage.bookName.getAttribute("outerHTML"));
 
         /*
         1.getText() --> it will return text from provided element
         2.getAttribute("value") --> if there is inputbox we are gonna use getattribute("value") to get data from here
-        3.getAttribute("innerHTML") --> it will get HTML code for related element
 
+        3.getAttribute("innerHTML") --> it will get HTML code inside related element
+            it will return only inner HTML -->   <span>Hello CYDEO</span>
+        4.getAttribute("outerHTML") --> it will get HTML code inside related element + current element HTML code
+            it will return inner + cuurent HTML
+                <div>
+                <span>Hello CYDEO</span>
+                </div>
+
+            <div>
+                <span>Hello CYDEO</span>
+            </div>
          */
 
         // get data from UI
@@ -96,6 +108,7 @@ public class BooksStepDefs {
         DB_Util.runQuery(query);
         //store information
         Map<String, String> bookInfo = DB_Util.getRowMap(1);
+
         System.out.println("---- DATA FROM DATABASE ---- ");
         String expectedBookName = bookInfo.get("name");
         System.out.println(expectedBookName);
