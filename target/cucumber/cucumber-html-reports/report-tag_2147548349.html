@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>04 Dec 2022, 01:55</td>
+      <td>04 Dec 2022, 17:18</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@db</td>
-          <td      class="passed"    >4</td>
+          <td      class="passed"    >5</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">4</td>
+          <td class="total">5</td>
 
-          <td  class="passed"    >2</td>
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td class="total">2</td>
+          <td class="total">1</td>
 
-          <td class="duration" data-value="329115400">0.329</td>
+          <td class="duration" data-value="3746059800">3.746</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -171,25 +171,26 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3287904602.html">As a data consumer, I want the user information are stored in mySql DB correctly in users table.</a>
+      <a href="report-feature_3967962972.html">As a data consumer, I want UI and DB book categories are match.</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2210186590.html">@us01</a>
+       <a href="report-tag_2210186592.html">@us03</a>
+       <a href="report-tag_2147548883.html">@ui</a>
        <a href="report-tag_2147548349.html">@db</a>
 </div>
 
 
-  <span class="lead-duration duration">0.054</span>
+  <span class="lead-duration duration">3.746</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">verify users has unique IDs</span>
+  <span class="name">verify book categories with DB</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -218,9 +219,25 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
+              <span class="location name">com.cydeo.steps.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">2.308</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
               <span class="location name">com.cydeo.steps.Hooks.setupDB()</span>
 
-  <span class="lead-duration duration">0.811</span>
+  <span class="lead-duration duration">0.423</span>
 
           </div>
 
@@ -253,11 +270,92 @@ $(document).ready(function() {
       <div class="step">
 
 
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">I login as a <span class="argument">&quot;librarian&quot;</span></span>
+
+  <span class="lead-duration duration">3.253</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">Execute query to get all IDs from users</span>
+  <span class="name">I navigate to <span class="argument">&quot;Books&quot;</span> page</span>
 
-  <span class="lead-duration duration">0.034</span>
+  <span class="lead-duration duration">0.055</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I take all book categories in UI</span>
+
+  <span class="lead-duration duration">0.371</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">I execute query to get book categories</span>
+
+  <span class="lead-duration duration">0.059</span>
 
 </div>
 
@@ -282,9 +380,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">verify all users has unique ID</span>
+  <span class="name">verify book categories must match book_categories table from db</span>
 
-  <span class="lead-duration duration">0.019</span>
+  <span class="lead-duration duration">0.004</span>
 
 </div>
 
@@ -329,7 +427,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.cydeo.steps.Hooks.destroyDB()</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
           </div>
 
@@ -340,213 +438,12 @@ $(document).ready(function() {
 
 
         </div>
-    </div>
-  </div>
-
-  </div>
-</div>
-
-
-<div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_3287904602.html">As a data consumer, I want the user information are stored in mySql DB correctly in users table.</a>
-    </div>
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2210186590.html">@us01</a>
-       <a href="report-tag_2147548349.html">@db</a>
-</div>
-
-
-  <span class="lead-duration duration">0.274</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
-
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">verify users table columns</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-5" class="collapse collapsable-details ">
-
-
-  <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="before-6" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">com.cydeo.steps.Hooks.setupDB()</span>
-
-  <span class="lead-duration duration">0.762</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-7" class="inner-level collapse collapsable-details ">
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">Execute query to get all columns</span>
-
-  <span class="lead-duration duration">0.271</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">verify the below columns are listed in result</span>
-
-  <span class="lead-duration duration">0.002</span>
-
-</div>
-
-
-
-
-
-
-
-          <table class="step-arguments">
-              <tr>
-                  <td>id</td>
-              </tr>
-              <tr>
-                  <td>full_name</td>
-              </tr>
-              <tr>
-                  <td>email</td>
-              </tr>
-              <tr>
-                  <td>password</td>
-              </tr>
-              <tr>
-                  <td>user_group_id</td>
-              </tr>
-              <tr>
-                  <td>image</td>
-              </tr>
-              <tr>
-                  <td>extra_data</td>
-              </tr>
-              <tr>
-                  <td>status</td>
-              </tr>
-              <tr>
-                  <td>is_admin</td>
-              </tr>
-              <tr>
-                  <td>start_date</td>
-              </tr>
-              <tr>
-                  <td>end_date</td>
-              </tr>
-              <tr>
-                  <td>address</td>
-              </tr>
-          </table>
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-8" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">com.cydeo.steps.Hooks.destroyDB()</span>
+              <span class="location name">com.cydeo.steps.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.671</span>
 
           </div>
 
