@@ -1,7 +1,7 @@
 @us06
 Feature: Books module
   As a librarian, I should be able to add new books to the library
-
+@ui @db
   Scenario Outline: Verify added book is matching with DB
     Given I login as a "librarian"
     And I navigate to "Books" page

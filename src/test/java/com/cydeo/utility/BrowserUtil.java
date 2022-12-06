@@ -1,5 +1,6 @@
 package com.cydeo.utility;
 
+import com.cydeo.utility.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -383,6 +384,13 @@ public class BrowserUtil {
         Select select=new Select(element);
 
         return getElementsText(select.getOptions());
+    }
+
+    public static void selectOptionDropdown(WebElement element,String category){
+
+        Select select=new Select(element);
+
+        select.selectByVisibleText(category);
     }
 
 
