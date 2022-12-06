@@ -18,15 +18,6 @@ public abstract  class BasePage {
     }
 
 
-    @FindBy(xpath = "//span[@class='title'][.='Users']")
-    public WebElement users;
-
-    @FindBy(xpath = "//span[@class='title'][.='Dashboard']")
-    public WebElement dashboard;
-
-    @FindBy(xpath = "//span[@class='title'][.='Books']")
-    public WebElement books;
-
     @FindBy(tagName = "h3")
     public WebElement pageHeader;
 

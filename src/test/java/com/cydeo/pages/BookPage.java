@@ -1,5 +1,6 @@
 package com.cydeo.pages;
 
+import com.cydeo.pages.BasePage;
 import com.cydeo.utility.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -25,12 +26,25 @@ public class BookPage extends BasePage {
     @FindBy(xpath = "(//input[@type='text'])[4]")
     public WebElement author;
 
+    @FindBy(xpath = "//div[@class='portlet-title']//a")
+    public WebElement addBook;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement saveChanges;
+
+    @FindBy(xpath = "//div[@class='toast-message']")
+    public WebElement toastMessage;
 
     @FindBy(name = "year")
     public WebElement year;
 
     @FindBy(name = "isbn")
     public WebElement isbn;
+
+    @FindBy(id = "book_group_id")
+    public WebElement categoryDropdown;
+
+
 
     @FindBy(id = "description")
     public WebElement description;
@@ -42,6 +56,10 @@ public class BookPage extends BasePage {
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
 
+    public WebElement borrowBook(String book) {
+        String xpath = "//td[3][.='" + book + "']/../td/a";
+        return Driver.getDriver().findElement(By.xpath(xpath));
+    }
 
 
 
