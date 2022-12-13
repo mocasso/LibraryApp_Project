@@ -1,4 +1,4 @@
-@us05
+@us05 @smoke
 Feature: As a librarian, I want to know what genre of books is being borrowed the most
 
   @db
